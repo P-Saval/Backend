@@ -1,0 +1,18 @@
+
+Creación de 2 modelos como mínimo
+
+1 dato relacionado como mínimo
+
+Diferentes roles de usuario con diferentes permisos + middleware Auth
+
+Subida de ficheros con Cloudinary + eliminación de archivo cuando se elimina el dato
+
+README.md con la documentación del proyecto
+
+Semilla para una de las colecciones
+
+Se evitan los duplicados en el array de los usuarios y no se pierde ningún dato
+
+CRUD completo de todas las colecciones
+
+Los roles del usuario funcionan de manera correcta como se indica en la descripción del proyecto
