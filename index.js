@@ -11,6 +11,7 @@ PORT = 3000;
 const app = express();
 connectDB();
 connectCloudinary();
+//prueba//
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
