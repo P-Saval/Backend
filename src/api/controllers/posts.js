@@ -1,5 +1,5 @@
 
-const Post = require("../models/Post");
+const Post = require("../models/posts");
 
 
 const getPosts = async (req, res, next) => {

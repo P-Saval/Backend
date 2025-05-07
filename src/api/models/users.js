@@ -14,7 +14,8 @@ const userSchema = new Schema(
         minlength: [6, "Password 8 characters minimum"],
      },
      image: {type: String, trim: true},
-     post: [{ type: mongoose.Types.ObjectId, ref: "posts"}]
+     post: [{ type: mongoose.Types.ObjectId, ref: "posts"}],
+     role: {type: String, required: true, enum: [ "User", "Admin" ], default: "User"}
     
 }, {
     timestamps: true,
