@@ -5,7 +5,7 @@
     next();
   }*/
 
-const User = require("../api/models/User");
+const User = require("../api/models/users");
 const { verifyJwt } = require("../utils/jwt");
 
 const isAuth = async (req, res, next) => {

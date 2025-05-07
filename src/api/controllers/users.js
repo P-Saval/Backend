@@ -1,7 +1,7 @@
 
 const { deleteFile } = require("../../utils/deleteFile");
 const { generateSign } = require("../../utils/jwt");
-const User = require("../models/User");
+const User = require("../models/users");
 const bcrypt = require("bcrypt");
 
 const getUsers = async (req, res, next) => {
