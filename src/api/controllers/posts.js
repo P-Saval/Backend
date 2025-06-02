@@ -14,9 +14,6 @@ const getPosts = async (req, res, next) => {
 const newPost = async (req, res, next) => {
     try {
       const newPost = new Post(req.body);
-      if(req.file){
-        newPost.image = req.file.path;
-      }
       const createdPost = await newPost.save();
       return res.status(201).json(createdPost);
     } catch (error) {

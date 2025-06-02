@@ -1,9 +1,3 @@
-/*function authenticateMiddleware(req, res, next) {
-    if (!req.user) {
-      return res.redirect('/login');
-    }
-    next();
-  }*/
 
 const User = require("../api/models/users");
 const { verifyJwt } = require("../utils/jwt");
@@ -22,4 +16,13 @@ const isAuth = async (req, res, next) => {
   }
 }
 
-module.exports = { isAuth };
+const isAdmin = function (req, res, next){
+  if(req.user.role !== "admin"){
+    return res.status(401).json("Unauthorized")
+  }
+  next()
+  }
+module.exports = { 
+  isAuth,
+  isAdmin
+ };

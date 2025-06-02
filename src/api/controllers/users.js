@@ -23,7 +23,11 @@ const getUser = async (req, res, next) => {
 }
 const registerUser = async (req, res, next) => {
   try {
-    const user = new User(req.body)
+    const user = new User(req.body);
+
+    if (req.file) {
+      User.image = req.file.path;
+    }
     const emailExist = await User.findOne({ email: user.email })
     if (emailExist) {
         return res.status(400).json("Email already exists");

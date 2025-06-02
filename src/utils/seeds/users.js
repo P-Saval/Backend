@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const User = require("../../api/models/User");
+const User = require("../../api/models/users");
 const users = require("../../data/users");
 
 const launchSeed = async () => {
@@ -13,4 +13,4 @@ try {
 }
 }
 
-launchSeed();no
+launchSeed();
